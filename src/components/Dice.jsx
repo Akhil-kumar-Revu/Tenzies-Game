@@ -8,7 +8,13 @@ export default function Dice(props){
 
     return(
         <>
-            <button onClick={props.heldChange} style={styles}>
+            <button 
+                onClick={props.heldChange} 
+                style={styles}
+                aria-pressed={props.isHeld}
+                aria-label={`Die with value ${props.value}, 
+                            ${props.isHeld ? "held" : "not held"}`}
+            >
                 {props.value}
             </button>
         </>
